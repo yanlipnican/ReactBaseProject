@@ -13,7 +13,7 @@ var config = {
     },
 
     output: {
-        path: __dirname + '/',
+        path: __dirname + '/build',
         filename: 'build.js',
     },
 

@@ -1,10 +1,11 @@
 {
   "name": "ReactBaseProject",
   "version": "1.0.0",
-  "description": "",
+  "description": "Base project for react with ES7",
   "main": "index.js",
   "scripts": {
-    "devel": "webpack-dev-server --hot"
+    "devel": "webpack-dev-server --hot",
+    "build": "webpack -p"
   },
   "keywords": [],
   "author": "",
