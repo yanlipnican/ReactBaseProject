@@ -6,8 +6,8 @@ import { Router, Route, Link, browserHistory } from 'react-router';
 import Store from 'Store';
 
 // Pages
-import Homepage from 'Routes/Homepage/Controller.jsx';
-import About from 'Routes/About/Controller.jsx';
+import Homepage from 'Homepage/Controller.jsx';
+import About from 'About/Controller.jsx';
 
 class App extends React.Component {
     render() {
