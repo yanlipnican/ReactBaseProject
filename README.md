@@ -1,5 +1,3 @@
-** Contains
-----
 Already set up
 ---
 1. React
