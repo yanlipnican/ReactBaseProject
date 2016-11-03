@@ -10,8 +10,15 @@ class About extends React.Component {
 
         this.data = {
             title : 'About',
-            text : 'We are poor.'
+            text : 'We are poor.',
+            handlers : {
+                p_click : this.p_click.bind(this),
+            }
         }
+    }
+
+    p_click(){
+        console.log(this.data.text);
     }
     
     render() {
