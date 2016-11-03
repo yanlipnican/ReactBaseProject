@@ -1,9 +1,10 @@
 var path = require('path');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var config = {
     entry: [
-        __dirname + '/src/main.js',
-        __dirname + '/src/styles/main.less'
+        __dirname + '/src/Main.js',
+        __dirname + '/styles/main.less'
     ],
     
     resolve: {
@@ -18,7 +19,8 @@ var config = {
 
     devServer: {
         inline: true,
-        port: 8888
+        port: 8888,
+        historyApiFallback: true
     },
 
     stats: {
@@ -31,14 +33,22 @@ var config = {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
                 loader: 'babel',
-                esversion : 7,
             },
 
             {
                 test: /\.less$/,
-                loader: "style!css!less"
+                exclude: /fonts/,
+                loader: ExtractTextPlugin.extract('style', 'css', 'less')
             },
+            {
+                test: /\.(eot|woff|woff2|ttf|svg|png|jpg)$/,
+                loader: 'url-loader?limit=30000&name=[name]-[hash].[ext]'
+            }
         ]
-    }
+    },
+
+    plugins: [
+        new ExtractTextPlugin("build.css")
+    ]
 }
 module.exports = config;
