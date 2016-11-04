@@ -40,7 +40,7 @@ var config = {
             {
                 test: /\.less$/,
                 exclude: /fonts/,
-                loader: ExtractTextPlugin.extract('style', 'css!less')
+                loader: prod ? ExtractTextPlugin.extract('style', 'css!less') : 'style!css!less'
             },
             {
                 test: /\.(eot|woff|woff2|ttf|svg|png|jpg)$/,
