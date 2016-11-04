@@ -38,7 +38,7 @@ var config = {
             {
                 test: /\.less$/,
                 exclude: /fonts/,
-                loader: ExtractTextPlugin.extract('style', 'css', 'less')
+                loader: ExtractTextPlugin.extract('style', 'css!less')
             },
             {
                 test: /\.(eot|woff|woff2|ttf|svg|png|jpg)$/,
