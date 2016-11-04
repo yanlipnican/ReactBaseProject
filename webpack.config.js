@@ -1,5 +1,7 @@
 var path = require('path');
+var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var prod = process.argv.indexOf('-p') !== -1;
 
 var config = {
     entry: [
@@ -51,4 +53,13 @@ var config = {
         new ExtractTextPlugin("build.css")
     ]
 }
+
+if (prod) {
+    config.plugins.push(new webpack.DefinePlugin({
+        'process.env': {
+            'NODE_ENV': `"production"`
+        }
+    }));
+}
+
 module.exports = config;
