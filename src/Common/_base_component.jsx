@@ -9,22 +9,22 @@ class RenameTHIS extends React.Component {
             <div></div>
         );
     }
-}
+};
 
 const actions = {
 
-}
+};
 
 const mapStateToProps = (state, ownProps) => {
     return {
 
     };
-}
+};
 
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         actions: bindActionCreators(actions, dispatch)
-    }
-}
+    };
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(RenameTHIS);
