@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import view from './View.jsx';
+import ACTIONS from 'Actions';
 
 class About extends React.Component {
     constructor() {

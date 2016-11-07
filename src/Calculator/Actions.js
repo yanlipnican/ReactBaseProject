@@ -1,0 +1,4 @@
+export default {
+    SET_SECOND_VALUE : 'SET_SECOND_VALUE',
+    SET_FIRST_VALUE : 'SET_FIRST_VALUE',
+};

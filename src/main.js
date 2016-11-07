@@ -8,6 +8,7 @@ import Store from 'Store';
 // Pages
 import Homepage from 'Homepage/Controller.jsx';
 import About from 'About/Controller.jsx';
+import Calculator from 'Calculator/Controller.jsx';
 
 class App extends React.Component {
     render() {
@@ -16,6 +17,7 @@ class App extends React.Component {
                 <Router history={browserHistory}>
                     <Route path="/" component={Homepage}/>
                     <Route path="/about" component={About}/>
+                    <Route path="/calculator" component={Calculator}/>
                 </Router>
             </Provider>
         );
