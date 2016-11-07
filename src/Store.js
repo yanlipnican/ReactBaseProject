@@ -1,10 +1,10 @@
 import { createStore, combineReducers } from 'redux';
 
-import Homepage from 'Routes/Homepage/Reducer.js';
+import Homepage from 'Homepage/Reducer.js';
 
 const reducers = {
     Homepage
-}
+};
 
 const store = createStore(combineReducers(reducers));
 

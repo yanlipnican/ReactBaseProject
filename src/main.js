@@ -23,6 +23,6 @@ class App extends React.Component {
 }
 
 // initialise app
-document.addEventListener("DOMContentLoaded", function(event) { 
+document.addEventListener('DOMContentLoaded', function(event) { 
     ReactDOM.render(<App />, document.getElementById('app'));
 });
